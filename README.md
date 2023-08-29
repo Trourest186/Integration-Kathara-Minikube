@@ -5,7 +5,7 @@
 ## Prerequisites
 - Prepare a Kathara machine [References](https://github.com/Trourest186/Kathara/blob/main/README.md)
 - Setup for remoting Docker Daemon
-  - Use kathara settings for inserting URL
+  - Use "kathara settings" for inserting URL
   - Add "Configuring remote access with systemd unit file" 
 
     [Original 1](https://docs.docker.com/config/daemon/remote-access/)
