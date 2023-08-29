@@ -28,7 +28,9 @@
 - [Links](https://github.com/Trourest186/Kathara/tree/main/Lab_networks)
   (Care "r" device)
   
-  Note: Rememeber shutdown firewall, selinux, swap before demo!
+  Note: 
+  - Rememeber shutdown firewall, selinux, swap before demo!
+  - Save a new image (docker commit) to continue working then why kathara can't save process before.
 
 ## Other References
 - [Docker in Docker](https://hub.docker.com/_/docker/)
