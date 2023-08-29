@@ -1,4 +1,4 @@
-# Hybrid-Kathara-Minikube
+# Integration-Kathara-Minikube
 
 ![image](https://github.com/Trourest186/Hybrid-Kathara-Minikube/assets/74035725/6a65a3b5-1a68-4085-9bae-db4a3bf4fb3c)
 
