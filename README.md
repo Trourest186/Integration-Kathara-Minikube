@@ -26,7 +26,7 @@
 
 ## Lab
 - [Links](https://github.com/Trourest186/Kathara/tree/main/Lab_networks)
-  (Care "r" device")
+  (Care "r" device)
 
 ## Other References
 - [Docker in Docker](https://hub.docker.com/_/docker/)
