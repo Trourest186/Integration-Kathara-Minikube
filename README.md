@@ -18,7 +18,7 @@
   ```
 
 ## Install Minikube
-- [Mikube](https://r2schools.com/how-to-install-minikube-on-ubuntu-22-04-lts/)
+- [Minikube](https://r2schools.com/how-to-install-minikube-on-ubuntu-22-04-lts/)
 - [Original](https://www.youtube.com/watch?v=qG7FGVWijeM&t=200s)
 
 ## Using with tutorial documents
