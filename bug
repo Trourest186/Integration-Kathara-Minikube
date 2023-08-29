@@ -1,0 +1,28 @@
+ỗi bạn đang gặp xảy ra khi bạn đang cố gắng thêm một node worker mới vào cluster Minikube. Lỗi này xuất hiện do một số vấn đề liên quan đến cấu hình môi trường và các thông số kiểm tra trước khi thêm node.
+
+Để khắc phục vấn đề này, bạn có thể thử các bước sau:
+
+Cập Nhật Kernel Config: Lỗi "failed to parse kernel config" xuất hiện vì không tìm thấy module "configs" trong thư mục /lib/modules. Bạn có thể cố gắng cập nhật kernel config bằng cách chạy lệnh sau:
+
+bash
+Copy code
+sudo apt update && sudo apt install linux-modules-$(uname -r)
+Bật Dịch Vụ Kubelet: Lỗi "kubelet service is not enabled" yêu cầu bạn bật dịch vụ kubelet bằng lệnh sau:
+
+bash
+Copy code
+sudo systemctl enable kubelet.service
+Kiểm Tra Cấu Hình CRI Socket: Lỗi "Usage of CRI endpoints without URL scheme" cho thấy có vấn đề với cấu hình CRI socket. Bạn cần kiểm tra cấu hình và sử dụng URL scheme "unix" cho "criSocket". Bạn có thể sửa file cấu hình kubelet (thường là /etc/kubernetes/kubelet.conf) và thêm "unix://" vào trước "criSocket".
+
+Kiểm Tra Token và Certificate: Lỗi "couldn't validate the identity of the API Server" xuất hiện do không thể xác minh token và chứng chỉ của API Server. Đảm bảo rằng token và chứng chỉ được cung cấp chính xác và phù hợp.
+
+Kiểm Tra Cấu Hình Node: Đảm bảo rằng cấu hình của node worker (minikube-m02) là chính xác và tương thích với cluster Minikube.
+
+Tắt Swap: Đảm bảo rằng swap đã được tắt trên node worker trước khi thêm vào cluster. Sử dụng lệnh swapoff -a để tắt swap.
+
+Khởi Động Lại Node: Sau khi thực hiện các bước trên, bạn có thể thử khởi động lại node worker và thử thêm vào cluster lại:
+
+sql
+Copy code
+minikube node start minikube-m02
+Nếu sau khi thử các bước trên mà vẫn gặp lỗi, hãy kiểm tra các thông báo lỗi cụ thể và xem xét các tài liệu hỗ trợ của Minikube để tìm cách giải quyết vấn đề.
