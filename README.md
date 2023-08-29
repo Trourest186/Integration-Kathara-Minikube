@@ -27,6 +27,7 @@
 ## Lab
 - [Links](https://github.com/Trourest186/Kathara/tree/main/Lab_networks)
   (Care "r" device)
+  Note: Rememeber shutdown firewall, selinux, swap before demo!
 
 ## Other References
 - [Docker in Docker](https://hub.docker.com/_/docker/)
